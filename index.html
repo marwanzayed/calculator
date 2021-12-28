@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <div class="toggle">
+          <h3>Calculator</h3>
+        </div>
+      </div>
+      <div class="screen">
+        <form name="calc">
+          <input class="text" type="text" name="text" readonly id="screen" />
+        </form>
+      </div>
+      <div class="cal-body">
+        <div class="btn">
+          <button class="num" onclick="document.calc.text.value += '7'">
+            7
+          </button>
+          <button class="num" onclick="document.calc.text.value += '8'">
+            8
+          </button>
+          <button class="num" onclick="document.calc.text.value += '9'">
+            9
+          </button>
+          <button class="del" onclick="del()">DEL</button>
+          <button class="num" onclick="document.calc.text.value += '4'">
+            4
+          </button>
+          <button class="num" onclick="document.calc.text.value += '5'">
+            5
+          </button>
+          <button class="num" onclick="document.calc.text.value += '6'">
+            6
+          </button>
+          <button onclick="document.calc.text.value += '+'">+</button>
+          <button class="num" onclick="document.calc.text.value += '1'">
+            1
+          </button>
+          <button class="num" onclick="document.calc.text.value += '2'">
+            2
+          </button>
+          <button class="num" onclick="document.calc.text.value += '3'">
+            3
+          </button>
+          <button onclick="document.calc.text.value += '-'">-</button>
+          <button onclick="document.calc.text.value += '.'">.</button>
+          <button class="num" onclick="document.calc.text.value += '0'">
+            0
+          </button>
+          <button onclick="document.calc.text.value += '/'">/</button>
+          <button onclick="document.calc.text.value += '*'">X</button>
+          <button class="reset" onclick="document.calc.text.value = ''">
+            RESET
+          </button>
+          <button
+            class="equal"
+            onclick="document.calc.text.value = eval(calc.text.value)"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
